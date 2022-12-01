@@ -1,0 +1,65 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.type {
+  width: 30px;
+  height: 30px;
+}
+.title {
+
+  background-color: #f6f0f0;
+  border-radius: 4px;
+}
+.hp {
+}
+.name {
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card{
+  border:8px solid #e7cb2e;
+  border-radius: 12px;
+  width: 200px;
+  height: 300px;
+  max-width: 200px;
+  max-height: 300px;
+  padding: 16px;
+  font-size: 15px;
+  background-color: deeppink;
+}
+.picture-container {
+  display: flex;
+  justify-content: center;
+}
+.pokepic {
+  border: 2px solid #e5dfdf;
+}
+.power-row1 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.powerCost {
+  width: 50px;
+  height: 20px;
+}
+.power-row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orb {
+  height: 18px;
+  width: 18px;
+}
+p {
+  font-weight: bold;
+}

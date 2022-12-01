@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div(class=`card ${cardClass}`)
+    div.info-row.id
+        p.title Basic
+        p.name Tapu Lele
+        p.hp 100
+        img.type(src="/images/fairy2.png")
+    div.picture-container
+        img.pokepic(src="/images/tapu.png")
+    div.power-row1
+        img.orb(src="/images/fairy2.png")
+        p.powerName Charm
+        p.powerDmg 0
+    div.power-row2
+        img.powerCost(src="/images/orbs.png")
+        p.powerName Magical Shot
+        p.powerDmg 70
