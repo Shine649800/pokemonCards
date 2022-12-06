@@ -1,0 +1,22 @@
+mixin pokemonCard(Pokemon)
+
+    div.card
+        div.info-row.id
+            div.title=Pokemon.title
+            div.name=Pokemon.name
+            div.hp=Pokemon.hp
+            img.type(src=`"${Pokemon.type}"`)
+        div.picture-container
+            img.pokepic(src=`"${Pokemon.pokepic}"`)
+        div.power-row1
+            img.orb(src=`"${Pokemon.orb}"`)
+            img.orb2(src=`"${Pokemon.orb2}"`)
+            img.orb3(src=`"${Pokemon.orb3}"`)
+            div.powerName=Pokemon.powerName
+            div.powerDmg=Pokemon.powerDmg
+        div.power-row2
+            img.orb4(src=`"${Pokemon.orb4}"`)
+            img.orb5(src=`"${Pokemon.orb5}"`)
+            img.orb6(src=`"${Pokemon.orb6}"`)
+            div.powerName2=Pokemon.powerName2
+            div.powerDmg2=Pokemon.powerDmg2

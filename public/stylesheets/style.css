@@ -2,7 +2,6 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
   color: #00B7FF;
 }
@@ -11,14 +10,10 @@ a {
   height: 30px;
 }
 .title {
-
   background-color: #f6f0f0;
   border-radius: 4px;
 }
-.hp {
-}
-.name {
-}
+
 .info-row {
   display: flex;
   justify-content: space-between;
@@ -33,7 +28,7 @@ a {
   max-height: 300px;
   padding: 16px;
   font-size: 15px;
-  background-color: deeppink;
+  background-color: #f34a9a;
 }
 .picture-container {
   display: flex;
@@ -60,6 +55,31 @@ a {
   height: 18px;
   width: 18px;
 }
+.orb2 {
+  height: 18px;
+  width: 18px;
+}
+.orb3 {
+  height: 18px;
+  width: 18px;
+}
+.orb4 {
+  height: 18px;
+  width: 18px;
+}
+.orb5 {
+  height: 18px;
+  width: 18px;
+}
+.orb6 {
+  height: 18px;
+  width: 18px;
+}
 p {
   font-weight: bold;
+}
+.container {
+  padding: 48px;
+  display: flex;
+  gap: 16px;
 }
