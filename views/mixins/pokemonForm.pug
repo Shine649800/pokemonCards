@@ -1,0 +1,64 @@
+mixin pokemonForm(pokemon, actionURL, mode, title)
+
+    div.form-panel
+        div.header= title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=pokemon.name)
+                div.form-input
+                    label(for='type') Type
+                    select(id='type' name='type' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type ===pokemon.type)) #{type}
+                div.form-input
+                    label(for='title') Title:
+                    input(type='text' id='title' name='title' value=pokemon.name)
+                div.form-input
+                    label(for='hp') HP:
+                    input(type='number' id='hp' name='hp' value=pokemon.hp)
+                div.form-input
+                    label(for='picture') Insert Image:
+                    input(type='text' id='picture' name='picture' value=pokemon.pokepic)
+                div.form-input
+                    label(for='orb1') Choose Power Cost:
+                    select(id='orb1' name='orb1' autocomplete='off')
+                         each type in types
+                             option(value=type selected = (type ===pokemon.orb)) #{type}
+                div.form-input
+                    label(for='orb2') Choose Power Cost:
+                    select(id='orb2' name='orb2' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemon.orb2)) #{type}
+                div.form-input
+                    label(for='orb3') Choose Power Cost:
+                    select(id='orb3' name='orb3' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemon.orb3)) #{type}
+                div.form-input
+                    label(for='powerName') Insert Power Name:
+                    input(type='text' id='powerName' name='powerName' value=pokemon.powerName)
+                div.form-input
+                    label(for='powerDmg') Insert Damage output:
+                    input(type='number' id='powerDmg' name='powerDmg' value=pokemon.powerDmg)
+                div.form-input
+                    label(for='orb4') Choose Power Cost:
+                    select(id='orb4' name='orb4' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemon.orb4)) #{type}
+                div.form-input
+                    label(for='orb5') Choose Power Cost:
+                    select(id='orb5' name='orb5' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemon.orb5)) #{type}
+                div.form-input
+                    label(for='orb6') Choose Power Cost:
+                    select(id='orb6' name='orb6' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemon.orb6)) #{type}
+                div.form-input
+                    label(for='powerName2') Insert Power Name:
+                    input(type='text' id='powerName2' name='powerName2' value=pokemon.powerName2)
+                div.form-input
+                    label(for='powerDmg2') Insert Damage output:
+                    input(type='number' id='powerDmg2' name='powerDmg2' value=pokemon.powerDmg2)
