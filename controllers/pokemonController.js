@@ -15,7 +15,7 @@ module.exports.deletePokemon = async function(req, res) {
     res.redirect('/');
 }
 module.exports.renderAddForm = function(req,res){
-    const pokemon = {
+    const pokemons = {
         title: "",
         name: "",
         hp: "",
@@ -32,5 +32,32 @@ module.exports.renderAddForm = function(req,res){
         powerName2: "",
         powerDmg2: 0,
     };
-    res.render('add', {pokemon, types})
+    res.render('add', {pokemons, types});
+}
+module.exports.addPokemon = async function(req,res){
+    await Pokemon.create (
+     {
+        title: req.body.title,
+        name: req.body.name,
+        hp: req.body.hp,
+        type: req.body.type,
+        pokepic: req.body.pokepic,
+        orb: req.body.orb,
+        orb2: req.body.orb2,
+        orb3: req.body.orb3,
+        powerName: req.body.powerName,
+        powerDmg: req.body.powerDmg,
+        orb4: req.body.orb4,
+        orb5: req.body.orb5,
+        orb6: req.body.orb6,
+        powerName2: req.body.powerName2,
+        powerDmg2: req.body.powerDmg2,
+    });
+    res.redirect('/');
+}
+module.exports.renderEditForm = async function(req, res, next) {
+    const pokemons = await Pokemon.findByPk(
+        req.params.id
+    );
+    res.render('edit', {pokemons, types});
 }

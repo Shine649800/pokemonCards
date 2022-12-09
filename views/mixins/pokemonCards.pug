@@ -1,8 +1,8 @@
 mixin pokemonCard(Pokemon)
 
     div.card
-        //div.edit
-        //    a(href=`/edit/${pokemon.id}`) Edit
+        div.edit
+            a(href=`/edit/${Pokemon.id}`) Edit
         div.info-row.id
             div.title=Pokemon.title
             div.name=Pokemon.name
@@ -20,7 +20,9 @@ mixin pokemonCard(Pokemon)
             div.powerDmg=Pokemon.powerDmg
         div.power-row2
             img.orb4(src=`${Pokemon.orb4}`)
-            img.orb5(src=`${Pokemon.orb5}`)
-            img.orb6(src=`${Pokemon.orb6}`)
+            if `${Pokemon.orb5}`
+                img.orb5(src=`${Pokemon.orb5}`)
+            if `${Pokemon.orb6}`
+                img.orb6(src=`${Pokemon.orb6}`)
             div.powerName2=Pokemon.powerName2
             div.powerDmg2=Pokemon.powerDmg2

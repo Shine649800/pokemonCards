@@ -6,5 +6,7 @@ const pokemonController = require('../controllers/pokemonController');
 router.get('/', pokemonController.viewAll);
 router.get('/delete/:id', pokemonController.deletePokemon);
 router.get('/add', pokemonController.renderAddForm);
+router.post('/add', pokemonController.addPokemon);
+router.get('/edit/:id', pokemonController.renderEditForm);
 
 module.exports = router;
