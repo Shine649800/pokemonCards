@@ -34,9 +34,11 @@ a {
 .picture-container {
   display: flex;
   justify-content: center;
+
 }
 .pokepic {
   border: 2px solid #e5dfdf;
+  border-radius: 2px;
 }
 .power-row1 {
   margin-top: 20px;
@@ -112,4 +114,29 @@ p {
 }
 .button.delete {
   max-width: 50px;
+}
+.line {
+  align-items: center;
+  background-color: #a89e9e;
+  margin-top: 20px;
+  width:200px;
+  height:1px;
+}
+.weak{
+  height: 18px;
+  width: 18px;
+}
+.resist{
+  height: 18px;
+  width: 18px;
+}
+.retreat {
+  height: 18px;
+  width: 18px;
+}
+.row {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }

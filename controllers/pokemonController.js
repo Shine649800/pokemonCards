@@ -31,6 +31,9 @@ module.exports.renderAddForm = function(req,res){
         orb6: "",
         powerName2: "",
         powerDmg2: 0,
+        weakness: "",
+        resistance: "",
+        retreat: ""
     };
     res.render('add', {pokemons, types});
 }
@@ -52,6 +55,9 @@ module.exports.addPokemon = async function(req,res){
         orb6: req.body.orb6,
         powerName2: req.body.powerName2,
         powerDmg2: req.body.powerDmg2,
+         weakness: req.body.weakness,
+         resistance: req.body.resistance,
+         retreat: req.body.retreat
     });
     res.redirect('/');
 }

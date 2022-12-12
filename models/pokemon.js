@@ -28,7 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     orb5: DataTypes.STRING,
     orb6: DataTypes.STRING,
     powerName2: DataTypes.STRING,
-    powerDmg2: DataTypes.INTEGER
+    powerDmg2: DataTypes.INTEGER,
+    weakness: DataTypes.STRING,
+    resistance: DataTypes.STRING,
+    retreat: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Pokemon',
