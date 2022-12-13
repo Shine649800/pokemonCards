@@ -62,6 +62,21 @@ mixin pokemonForm(pokemons, actionURL, mode, title)
                 div.form-input
                     label(for='powerDmg2') Insert Damage output:
                     input(type='number' id='powerDmg2' name='powerDmg2' value=pokemons.powerDmg2)
+                div.form-input
+                    label(for='weakness') Choose Weakness:
+                    select(id='weakness' name='weakness' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemons.weakness)) #{type}
+                div.form-input
+                    label(for='resistance') Choose Resistance:
+                    select(id='resistance' name='resistance' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemons.resistance)) #{type}
+                div.form-input
+                    label(for='retreat') Choose retreat Cost:
+                    select(id='retreat' name='retreat' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type === pokemons.retreat)) #{type}
                 div.button-row
                     a.button.cancel(href='/') Cancel
                     if (mode==='edit')

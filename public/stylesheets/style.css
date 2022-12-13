@@ -39,6 +39,8 @@ a {
 .pokepic {
   border: 2px solid #e5dfdf;
   border-radius: 2px;
+  max-height: 200px;
+  max-width: 175px;
 }
 .power-row1 {
   margin-top: 20px;
