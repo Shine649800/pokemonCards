@@ -1,5 +1,5 @@
 const {Pokemon} = require('../models')
-const types = ['Fairy', 'Fire', 'Water', 'Lightning', 'Metal', 'Dark', 'Fighting', 'Psychic', 'Grass', 'basic'];
+const types = ['Fairy', 'Fire', 'Water', 'Lightning', 'Metal', 'Dark', 'Fighting', 'Psychic', 'Grass', 'basic', 'none'];
 module.exports.viewAll = async function(req, res, next) {
     const pokemons = await Pokemon.findAll();
     res.render('index', {pokemons, types});
@@ -40,21 +40,21 @@ module.exports.renderAddForm = function(req,res){
 module.exports.addPokemon = async function(req,res){
     await Pokemon.create (
      {
-        title: req.body.title,
-        name: req.body.name,
-        hp: req.body.hp,
-        type: `/images/${req.body.type}.png`,
-        pokepic: req.body.pokepic,
-        orb: `/images/${req.body.orb}.png`,
-        orb2: `/images/${req.body.orb2}.png`,
-        orb3: `/images/${req.body.orb3}.png`,
-        powerName: req.body.powerName,
-        powerDmg: req.body.powerDmg,
-        orb4: `/images/${req.body.orb4}.png`,
-        orb5: `/images/${req.body.orb5}.png`,
-        orb6: `/images/${req.body.orb6}.png`,
-        powerName2: req.body.powerName2,
-        powerDmg2: req.body.powerDmg2,
+         title: req.body.title,
+         name: req.body.name,
+         hp: req.body.hp,
+         type: `/images/${req.body.type}.png`,
+         pokepic: req.body.pokepic,
+         orb: `/images/${req.body.orb}.png`,
+         orb2: checkNull(req.body.orb2),
+         orb3: checkNull(req.body.orb3),
+         powerName: req.body.powerName,
+         powerDmg: req.body.powerDmg,
+         orb4: `/images/${req.body.orb4}.png`,
+         orb5: checkNull(req.body.orb5),
+         orb6: checkNull(req.body.orb6),
+         powerName2: req.body.powerName2,
+         powerDmg2: req.body.powerDmg2,
          weakness: `/images/${req.body.weakness}.png`,
          resistance: `/images/${req.body.resistance}.png`,
          retreat: `/images/${req.body.retreat}.png`
@@ -76,13 +76,13 @@ module.exports.updatePokemon = async function(req, res) {
             type: `/images/${req.body.type}.png`,
             pokepic: req.body.pokepic,
             orb: `/images/${req.body.orb}.png`,
-            orb2: `/images/${req.body.orb2}.png`,
-            orb3: `/images/${req.body.orb3}.png`,
+            orb2: checkNull(req.body.orb2),
+            orb3: checkNull(req.body.orb3),
             powerName: req.body.powerName,
             powerDmg: req.body.powerDmg,
             orb4: `/images/${req.body.orb4}.png`,
-            orb5: `/images/${req.body.orb5}.png`,
-            orb6: `/images/${req.body.orb6}.png`,
+            orb5: checkNull(req.body.orb5),
+            orb6: checkNull(req.body.orb6),
             powerName2: req.body.powerName2,
             powerDmg2: req.body.powerDmg2,
             weakness: `/images/${req.body.weakness}.png`,
@@ -96,4 +96,11 @@ module.exports.updatePokemon = async function(req, res) {
                 }
         });
     res.redirect('/');
+}
+function checkNull(input){
+    if (input == 'none') {
+        return null;
+    } else {
+        return input
+    }
 }
