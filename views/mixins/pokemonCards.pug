@@ -11,7 +11,7 @@ mixin pokemonCard(Pokemon)
         div.picture-container
             img.pokepic(src=`${Pokemon.pokepic}`)
         div.power-row1
-            img.orb(src=`${Pokemon.orb}`)
+            img.orb(src=`/images/${Pokemon.orb}.png`)
             if `${Pokemon.orb2}`
                 img.orb2(src=`${Pokemon.orb2}`)
             if `${Pokemon.orb3}`
@@ -20,7 +20,7 @@ mixin pokemonCard(Pokemon)
             div.powerDmg=Pokemon.powerDmg
         div.power-row2
             img.orb4(src=`${Pokemon.orb4}`)
-            if `${Pokemon.orb5}`
+            if `/images/${Pokemon.orb5}.png`
                 img.orb5(src=`${Pokemon.orb5}`)
             if `${Pokemon.orb6}`
                 img.orb6(src=`${Pokemon.orb6}`)

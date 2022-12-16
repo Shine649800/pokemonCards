@@ -56,6 +56,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 .orb {
   height: 18px;
